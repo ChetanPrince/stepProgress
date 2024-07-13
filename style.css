@@ -31,6 +31,7 @@ margin: 20% 20% 30% 80%;
 }
 @keyframes anim {
     100%{
+        content:"Animation Complete";
         width: 0%;
     }
     75%{
@@ -43,6 +44,7 @@ margin: 20% 20% 30% 80%;
         width: 75%;
     }
     0%{
+       content:"";
         width: 100%;
     }
 }
