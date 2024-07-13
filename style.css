@@ -2,3 +2,47 @@
     margin:0;
     padding:0;
 }
+#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 10px;
+    background-color: none;
+    margin-top: 10%;;
+}
+#container:after{
+    content : "";
+    background-color: black;
+    /* animation: anim 5s linear forwards; */
+
+}
+#next{
+   width: 100px;
+   height: 100px;
+transform: translate(-50%, -50%);
+margin: 20% 20% 30% 80%;
+}
+.progress{
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    margin-top: -2.5%;
+}
+@keyframes anim {
+    100%{
+        width: 0%;
+    }
+    75%{
+        width: 25%;
+    }
+    50%{
+        width: 50%;
+    }
+    25%{
+        width: 75%;
+    }
+    0%{
+        width: 100%;
+    }
+}
