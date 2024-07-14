@@ -7,7 +7,6 @@ function progressAction(){
 
 
 const btnProgress = document.getElementById("next-button");
-const btnProgress = document.getElementById("next-button");
-const btnProgress = document.getElementById("next-button");
+
 
 btnProgress.addEventListener("click", progressAction)
