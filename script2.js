@@ -1,51 +1,25 @@
-const proContainers =document.querySelectorAll(".progress-container");
-const steps = document.querySelectorAll(".steps");
-        let currentIndex = -1;
+document.addEventListener("DOMContentLoaded",()=>{
+    const progressContainer = document.querySelectorAll(".progress-container");
+    const steps = document.querySelectorAll(".steps");
+    let currentIndex = -1;
 
-function progressAction(){
-        if(currentIndex <proContainers.length -1){
-        currentIndex++;
-        proContainers[currentIndex].classList.add("show");
-        steps[currentIndex].classList.add("show");}
-}
+    function nextProgress(){
+        if(currentIndex < progressContainer.length -1){
+            currentIndex++;
+            progressContainer[currentIndex].classList.add("show");
+            steps[currentIndex].classList.add("show");
+        }
+    }
+    function prevProgress(){
+        if(currentIndex >=0){
+            progressContainer[currentIndex].classList.remove("show");
+            steps[currentIndex].classList.remove("show");
+            currentIndex--;
 
-
-function progressActionReverse(){
-    if(currentIndex >=0){
-        proContainers[currentIndex].classList.remove("show")
-        steps[currentIndex].classList.remove("show");;
-        currentIndex--;
-             } }
-
-
-const nextBtn = document.getElementById("next");
-nextBtn.addEventListener("click", progressAction);
-
-const prevBtn = document.getElementById("previous");
-prevBtn.addEventListener("click", progressActionReverse);
-
-
-// 
-// 
-// 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const proContainers = document.querySelectorAll('.progress-container');
-//     let currentIndex = -1; 
-//     function progressAction() {
-//         if (currentIndex < proContainers.length - 1) {
-//             currentIndex++;
-//             proContainers[currentIndex].classList.add('show');
-//         }    }
-
-//     function progressActionReverse() {
-//         if (currentIndex >= 0) {
-//             proContainers[currentIndex].classList.remove('show');
-//             currentIndex--;
-//         }    }
-
-//     const nextBtn = document.getElementById('next');
-//     nextBtn.addEventListener('click', progressAction);
-
-//     const prevBtn = document.getElementById('previous');
-//     prevBtn.addEventListener('click', progressActionReverse);
-// });
+        }
+    }
+    const nextBtn = document.getElementById("next");
+    nextBtn.addEventListener("click", nextProgress);
+    const previousBtn = document.getElementById("previous");
+    previousBtn.addEventListener("click", prevProgress);
+})
