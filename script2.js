@@ -1,21 +1,18 @@
 const proContainers =document.querySelectorAll(".progress-container");
         let currentIndex = -1;
+        
 function progressAction(){
-    
-    if(currentIndex <proContainers.length -1){
+        if(currentIndex <proContainers.length -1){
         currentIndex++;
-        proContainers[currentIndex].classList.add("show");
-    }
+        proContainers[currentIndex].classList.add("show");}
 }
 
 
 function progressActionReverse(){
     if(currentIndex >=0){
-            currentIndex--;
         proContainers[currentIndex].classList.remove("show");
-          
-    }
-}
+        currentIndex--;
+             } }
 
 
 const nextBtn = document.getElementById("next");
